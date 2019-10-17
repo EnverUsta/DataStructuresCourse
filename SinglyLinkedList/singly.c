@@ -49,6 +49,12 @@ void printList(Node* head){
 	}
 }
 
+//TODO: printing our linkedList recursively.
+void printListRecursively(Node* head){
+	printf("%d\n",head->m_data);
+	printListRecursively(head->next);
+}
+
 //TODO: Function to swap nodes x and y in linked list by changing links. 
 void swapNodes(Node** head_ref, int x, int y){
 
@@ -107,8 +113,8 @@ void reverseLinkedList(Node** head_ref){
 	(*head_ref) = prev;
 }
 
-Node* reverseRecursively(Node* head) 
-    { 
+//TODO: Function to do reverse our linkedList recursively.
+Node* reverseRecursively(Node* head){ 
         if (head == NULL || head->next == NULL) 
             return head; 
   
@@ -122,8 +128,63 @@ Node* reverseRecursively(Node* head)
   
         /* fix the head pointer */
         return rest; 
-    } 
+ } 
 
+
+//TODO: Merging two sorted linkedList.
+Node* sortedMerge(Node* head1, Node* head2){
+	//if head_ref is equal to NULL, nothing to do.
+	Node* iter = head1;
+	if(iter == NULL || head2 == NULL) return iter;
+	while(head2 != NULL){
+		Node* dummy = (Node*)malloc(sizeof(Node));
+		dummy->m_data = head2->m_data;
+
+		while(iter->next != NULL && iter->next->m_data <= dummy->m_data){
+			iter = iter->next;
+		}
+		//if data that we'll add is smaller than our first node
+		//We've used head1 instead of iter because we're changing our first node.
+		if(dummy->m_data <= iter->m_data){
+			dummy->next	= head1;
+			head1 = dummy;
+		}
+		//Adding to between nodes or to last node.
+		else{
+			dummy->next	= iter->next;
+			iter->next = dummy;	
+		}
+		head2 = head2->next;
+	}
+	return head1;
+}
+
+
+void mergeSort(Node** head_ref){
+	
+}
+
+
+
+//TODO: merging 2 sorted linkedList.
+Node* sortedMergeRecursively(Node* a, Node* b){
+	Node* result = NULL;
+
+	//our exits for recursive function.
+	if(a == NULL) return b;
+	else if(b == NULL) return a;
+
+	//We'll choose smaller one and assign it to result.
+	if(a->m_data <= b->m_data){
+		result = a;
+		result->next = sortedMergeRecursively(a->next, b);
+	}
+	else{
+		result = b;
+		result->next = sortedMergeRecursively(a, b->next);
+	}
+	return result;
+}
 
 int main(){
 	Node* head = NULL;
@@ -139,5 +200,18 @@ int main(){
 	printList(head);
 	head = reverseRecursively(head);
 	printList(head);
+
+
+	Node* head2 = NULL;
+	pushNode(&head2, 3);
+	pushNode(&head2, 4);
+	pushNode(&head2, 33);
+	pushNode(&head2, 45);
+	pushNode(&head2, 55);
+	pushNode(&head2, 65);
+	printList(head2);
+
+	Node* deneme = sortedMergeRecursively(head, head2);
+	printList(deneme);
 
 }	
