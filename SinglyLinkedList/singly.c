@@ -17,22 +17,7 @@ int getCountRecursive(Node* head){
 }
 
 
-//TODO: Pushing node to our linklist.
-void pushNode(Node** head_ref, int data){
-	//adding node to first place. 
-	if((*head_ref) == NULL){
-		(*head_ref) = (Node*)malloc(sizeof(Node));
-		(*head_ref)->m_data = data;
-		(*head_ref)->next = NULL;
-	}
-	else{
-		Node* iter = *head_ref;
-		while(iter->next != NULL)iter = iter->next;
-		iter->next = (Node*)malloc(sizeof(Node));
-		iter->next->m_data = data;
-		iter->next->next = NULL;
-	}
-}
+
 
 
 //TODO: printing our linkedList.
@@ -102,8 +87,8 @@ void swapNodes(Node** head_ref, int x, int y){
 
 //TODO: Function to do reverse our linkedList.
 void reverseLinkedList(Node** head_ref){
-	Node* next, *prev = NULL;
-	Node* curr = *head_ref;
+	Node *next, *prev = NULL;
+	Node *curr = *head_ref;
 	while(curr != NULL){
 		next = curr->next;
 		curr->next = prev;
@@ -115,9 +100,7 @@ void reverseLinkedList(Node** head_ref){
 
 //TODO: Function to do reverse our linkedList recursively.
 Node* reverseRecursively(Node* head){ 
-        if (head == NULL || head->next == NULL) 
-            return head; 
-  
+        if (head == NULL || head->next == NULL) return head; 
         /* reverse the rest list and put  
           the first element at the end */
         Node* rest = reverseRecursively(head->next); 
@@ -128,7 +111,7 @@ Node* reverseRecursively(Node* head){
   
         /* fix the head pointer */
         return rest; 
- } 
+} 
 
 
 //TODO: Merging two sorted linkedList.
