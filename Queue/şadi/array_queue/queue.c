@@ -8,7 +8,7 @@ int sira = 0, sirabasi = 0, boyut = 2;
 
 //TODO: deque
 int deque(){
-	if(sira == sirabasi){
+	if(sirabasi == sira){
 		printf("sira bos\n");
 		return -1;
 	}
