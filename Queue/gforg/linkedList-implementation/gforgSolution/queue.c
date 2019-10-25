@@ -51,20 +51,20 @@ void enqueue(Queue *q, int data){
 }
 
 //function to delete the first node of queue (It's my solution).
-int dequeueMy(Queue **q){
+int dequeueMy(Queue **q_ref){
 	//if queue is empty
-	if((*q)->front == NULL)return INT_MIN;
+	if((*q_ref)->front == NULL)return INT_MIN;
 
 	//We'll define a temp in order to delete first item of queue
 	QNode* temp;
-	temp = (*q)->front;
+	temp = (*q_ref)->front;
 	//store the data
 	int rValue = temp->m_data;
-	(*q)->front = (*q)->front->m_next;
+	(*q_ref)->front = (*q_ref)->front->m_next;
 	free(temp);
 
 	// If front becomes NULL, then change rear also as NULL
-	if((*q)->front == NULL) (*q)->rear = NULL;
+	if((*q_ref)->front == NULL) (*q_ref)->rear = NULL;
 	return rValue;
 }
 
