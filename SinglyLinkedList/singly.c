@@ -110,8 +110,9 @@ Node* reverseRecursively(Node* head){
         head->next = NULL; 
   
         /* fix the head pointer */
-        return rest; 
+        return rest;
 } 
+
 
 
 //TODO: Merging two sorted linkedList.
@@ -148,6 +149,25 @@ void mergeSort(Node** head_ref){
 }
 
 
+Node* sortedMergeRecursively2(Node* a, Node* b){
+	Node* result = NULL;
+	if(a == NULL) return(b);
+	else if(b == NULL) return(a);
+	if(a->m_data <= b->m_data){
+		result = a;
+		result->next = sortedMergeRecursively2(a->next, b);
+	}
+	else{
+		result =b;
+		result->next = sortedMergeRecursively2(a, b->next);
+	}
+	return result;
+
+}
+
+
+
+
 
 //TODO: merging 2 sorted linkedList.
 Node* sortedMergeRecursively(Node* a, Node* b){
@@ -169,6 +189,22 @@ Node* sortedMergeRecursively(Node* a, Node* b){
 	return result;
 }
 
+
+
+void pushNode(Node** head, int data){
+	if(*head == NULL){
+		*head = (Node*)malloc(sizeof(Node));
+		(*head)->m_data = data,
+		(*head)->next = NULL;
+		return;
+	}
+	Node* iter = *head;
+	while(iter->next != NULL) iter = iter->next;
+	iter->next = (Node*)malloc(sizeof(Node));
+	iter->next->m_data = data;
+	iter->next->next = NULL;
+}
+
 int main(){
 	Node* head = NULL;
 	pushNode(&head, 10);
@@ -179,22 +215,8 @@ int main(){
 	pushNode(&head, 60);
 	printList(head);
 	printf("number of elements in your linkedList :%d\n", getCountRecursive(head));
-	reverseLinkedList(&head);
-	printList(head);
 	head = reverseRecursively(head);
 	printList(head);
-
-
-	Node* head2 = NULL;
-	pushNode(&head2, 3);
-	pushNode(&head2, 4);
-	pushNode(&head2, 33);
-	pushNode(&head2, 45);
-	pushNode(&head2, 55);
-	pushNode(&head2, 65);
-	printList(head2);
-
-	Node* deneme = sortedMergeRecursively(head, head2);
-	printList(deneme);
+	
 
 }	
