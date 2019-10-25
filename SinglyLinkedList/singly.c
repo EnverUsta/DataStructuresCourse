@@ -149,26 +149,6 @@ void mergeSort(Node** head_ref){
 }
 
 
-Node* sortedMergeRecursively2(Node* a, Node* b){
-	Node* result = NULL;
-	if(a == NULL) return(b);
-	else if(b == NULL) return(a);
-	if(a->m_data <= b->m_data){
-		result = a;
-		result->next = sortedMergeRecursively2(a->next, b);
-	}
-	else{
-		result =b;
-		result->next = sortedMergeRecursively2(a, b->next);
-	}
-	return result;
-
-}
-
-
-
-
-
 //TODO: merging 2 sorted linkedList.
 Node* sortedMergeRecursively(Node* a, Node* b){
 	Node* result = NULL;
