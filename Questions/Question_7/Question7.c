@@ -27,9 +27,7 @@ Node* add(Node* root, int data){
 void NumberOfBranches(Node* tree, int left, int right){
 	if(tree == NULL)return;
 
-	NumberOfBranches(tree->m_left, left++, right)
-
-
+	NumberOfBranches(tree->m_left, left++, right);
 }
 
 
