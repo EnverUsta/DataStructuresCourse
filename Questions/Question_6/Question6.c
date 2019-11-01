@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 
 typedef struct Node{
@@ -38,6 +39,48 @@ Node* push(Node* head, char data){
 	return head;
 
 }
+
+
+
+void moveNode(Node** destRef, Node** sourceRef){
+	
+	Node* newNode = *sourceRef;
+	assert(newNode != NULL);
+
+	*sourceRef = newNode->m_next;
+
+	newNode->m_next = *destRef;
+
+	*destRef = newNode;
+
+}
+
+Node* sortedMerge2(Node* a, Node* b){
+	Node dummy;
+	Node* tail = &dummy;
+
+	dummy.m_next = NULL;
+
+	while(1){
+		if(a == NULL){
+			tail->m_next = b;
+			break;
+		}
+		else if(b == NULL){
+			tail->m_next = a;
+			break;
+		}
+
+		if(a->m_data <= b->m_data)
+			moveNode(&(tail->m_next), &a);
+		else
+			moveNode(&(tail->m_next), &b);
+
+		tail = tail->m_next;
+	}
+	return dummy.m_next;
+}
+
 
 
 	
@@ -90,7 +133,7 @@ int main(){
 	head2 = push(head2, 'L');
 	
 
-	Node* head3 = sortedMerge(head1, head2);
+	Node* head3 = sortedMerge2(head1, head2);
 	print(head3);
 
 }
