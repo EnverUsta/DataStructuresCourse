@@ -54,7 +54,6 @@ void moveNode(Node** destRef, Node** sourceRef){
 	*destRef = newNode;
 
 }
-
 Node* sortedMerge2(Node* a, Node* b){
 	Node dummy;
 	Node* tail = &dummy;
