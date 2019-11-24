@@ -121,7 +121,7 @@ void straightInsertionSort(int Dizi[], int boyut) {
 void fillArrayReverse(int *array, int size){
 	for (int i = 0; i < size; ++i)
 	{
-		array[i] = size-i;
+		array[i] = (size-i) % 500;
 	}
 }
 
@@ -159,7 +159,7 @@ int main(){
 	clock_t end_straightInsertionSort = clock();
 
 	
-	
+
 	printf("selectionSort : ");
 	exeTime(start_selectionSort, end_selectionSort);
 	
