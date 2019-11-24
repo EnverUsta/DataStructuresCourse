@@ -17,3 +17,5 @@ Merge Sort	    Ω(n log(n))	  θ(n log(n))	  O(n log(n))
 Bucket Sort	    Ω(n+k)	      θ(n+k)	      O(n^2)
 Radix Sort	    Ω(nk)	        θ(nk)	        O(nk)
 ```
+
+Stable => do research about stable
