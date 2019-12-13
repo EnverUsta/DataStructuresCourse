@@ -21,6 +21,9 @@
 */
 
 
+fputc '\n'
+
+
 
 //TODO: function to multiply two arrays and find result.
 void multiply(int *array1, int *array2, int n, int *arrayResult);
