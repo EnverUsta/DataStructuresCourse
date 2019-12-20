@@ -12,6 +12,7 @@ typedef struct TNode{
 typedef struct Stack{
 	int m_top;
 	int m_capacity;
+	int m_size;
 	int *m_array;
 }Stack;
 
@@ -22,6 +23,41 @@ typedef struct Queue{
 	int *m_array;
 }Queue;
 
+typedef struct LNode{
+	int m_data;
+	struct LNode* m_next;
+}LNode;
+
+
+void addData(LNode** head, int data)
+{
+	if(*head == NULL)
+	{
+		*head = (LNode*)malloc(sizeof(LNode));
+		(*head)->m_next = NULL;
+		(*head)->m_data = data;
+		return; 
+	}
+	LNode* iter = *head; 
+	while(iter->m_next != NULL) iter = iter->m_next;
+	LNode* temp = malloc(sizeof(LNode));
+	temp->m_data = data;
+	temp->m_next = iter->m_next;
+	iter->m_next = temp;
+}
+
+
+void printLinkedList(LNode* head)
+{
+	if(head == NULL)return;
+	while(head != NULL)
+	{
+		printf("linkedList: %d\n", head->m_data);
+		head = head->m_next;
+	}
+	printf("\n");
+}
+
 
 Stack* createStack(int capacity)
 {
@@ -29,6 +65,7 @@ Stack* createStack(int capacity)
 	newStack->m_capacity = capacity;
 	newStack->m_array = malloc(sizeof(int)*capacity);
 	newStack->m_top = -1;
+	newStack->m_size = 0;
 	return newStack;
 }
 
@@ -60,10 +97,19 @@ int dequeue(Queue *queue)
 	return rValue;
 }
 
+void printQueue(Queue *queue)
+{
+	for(int i = queue->m_front; i <= queue->m_rear; i++){
+		printf("queue : %d\n", queue->m_array[i]);
+	}
+	printf("\n");
+}
+
 
 void push(Stack *stack, int data)
 {
 	stack->m_array[++stack->m_top] = data;
+	stack->m_size++;
 }
 
 
@@ -72,14 +118,16 @@ int pop(Stack* stack)
 	if(stack->m_top < 0)
 		return INT_MIN;
 	int rValue = stack->m_array[stack->m_top--];
+	stack->m_size--;
 	return rValue;
 }
 
 void printStack(Stack* stack)
 {
 	for(int i = 0; i <= stack->m_top; i++){
-		printf("%d\n", stack->m_array[i]);
+		printf("stack: %d\n", stack->m_array[i]);
 	}
+	printf("\n");
 }
 
 
@@ -120,19 +168,52 @@ void addTreeToStack(TNode* head, Stack* stack)
 	addTreeToStack(head->m_right, stack);
 }
 
+void addTreeToQueue(TNode* head, Queue *queue)
+{
+	if(head == NULL) return;
+	addTreeToQueue(head->m_left, queue);
+	enqueue(queue, head->m_data);
+	addTreeToQueue(head->m_right, queue);
+}
 
+void addTreeToLinkedList(TNode* head, LNode* headL)
+{
+	if(head == NULL) return;
+	addTreeToLinkedList(head->m_left, headL);
+	addData(&headL, head->m_data);
+	addTreeToLinkedList(head->m_right, headL);
+}
+
+void stackToQueue(Stack* stack, Queue *queue)
+{
+
+}
+
+void stackToLinkedList(Stack *stack, LNode* head)
+{
+	for(int i = 0; i < stack->m_size; i++)
+	{
+		addData(&head, stack->m_array[i]);	
+	}
+}
 
 int main(){
 	TNode *head = NULL;
+	LNode *headL = NULL;
 	Stack *stack = createStack(10);
 	Queue *queue = createQueue(10);
 
+
+	push(stack, 1);
 	head = addTree(head, 10);
 	head = addTree(head, 20);
 	head = addTree(head, 30);
 	head = addTree(head, 40);
 	head = addTree(head, 50);
+	printf("Before: \n");
+	printStack(stack);
 	addTreeToStack(head, stack);
+	printf("After: \n");
 	printStack(stack);
 
 	enqueue(queue, 10);
@@ -140,7 +221,27 @@ int main(){
 	enqueue(queue, 30);
 	enqueue(queue, 40);
 	enqueue(queue, 50);
-	printf("%d\n", dequeue(queue));
-	printf("%d\n", dequeue(queue));
+	printf("Before: \n");
+	printQueue(queue);
+
+	addTreeToQueue(head, queue);
+	printf("After: \n");
+	printQueue(queue);
+
+	addData(&headL, 5);
+	addData(&headL, 10);
+	addData(&headL, 15);
+	addData(&headL, 20);
+	addData(&headL, 25);
+	addData(&headL, 30);
+	printf("Before: \n");
+	printLinkedList(headL);
+	addTreeToLinkedList(head, headL);
+	printf("After: \n");
+	printLinkedList(headL);
+
+	printf("After the stackToLinkedList():\n");
+	stackToLinkedList(stack, headL);
+	printLinkedList(headL);
 
 }
