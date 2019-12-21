@@ -186,7 +186,7 @@ void addTreeToLinkedList(TNode* head, LNode* headL)
 
 void stackToQueue(Stack* stack, Queue *queue)
 {
-
+	
 }
 
 void stackToLinkedList(Stack *stack, LNode* head)
