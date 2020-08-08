@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="53a69143-8d43-4323-bcb1-d656855708cd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZqiVWz8pQRieNb6V6snGujI5DF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\DataStructure\Union-Find\Assignment\Dependencies" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PercolationStats">
+    <configuration name="InteractivePercolationVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InteractivePercolationVisualizer" />
+      <module name="Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Assignment" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Percolation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Percolation" />
+      <module name="Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PercolationStats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PercolationStats" />
+      <module name="Assignment" />
+      <option name="PROGRAM_PARAMETERS" value="2 10000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PercolationVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PercolationVisualizer" />
+      <module name="Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.InteractivePercolationVisualizer" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.PercolationStats" />
+      <item itemvalue="Application.PercolationVisualizer" />
+      <item itemvalue="Application.Percolation" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PercolationStats" />
+        <item itemvalue="Application.PercolationVisualizer" />
+        <item itemvalue="Application.InteractivePercolationVisualizer" />
+        <item itemvalue="Application.Percolation" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53a69143-8d43-4323-bcb1-d656855708cd" name="Default Changelist" comment="" />
+      <created>1585573048692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585573048692</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="310" y="69" key="#Project_Structure" timestamp="1586025330082">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="310" y="69" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1586025330082" />
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585685151465">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585685151465" />
+    <state x="107" y="130" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586025223556">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="107" y="130" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586025223556" />
+    <state x="361" y="115" width="508" height="654" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1586016490843">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="115" width="508" height="654" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824@0.0.1536.824" timestamp="1586016490843" />
+    <state x="599" y="105" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1585573208800">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="599" y="105" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.824@0.0.1536.824" timestamp="1585573208800" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586025240718">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586025240718" />
+    <state x="526" y="123" key="DetectedRootsChooserDialog" timestamp="1585573178044">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="123" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1585573178044" />
+    <state x="872" y="142" key="FileChooserDialogImpl" timestamp="1585573207478">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="872" y="142" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585573207478" />
+    <state width="1493" height="138" key="GridCell.Tab.0.bottom" timestamp="1586025446954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="138" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586025446954" />
+    <state width="1493" height="138" key="GridCell.Tab.0.center" timestamp="1586025446954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="138" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586025446954" />
+    <state width="1493" height="138" key="GridCell.Tab.0.left" timestamp="1586025446954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="138" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586025446954" />
+    <state width="1493" height="138" key="GridCell.Tab.0.right" timestamp="1586025446954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="138" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586025446954" />
+    <state x="213" y="86" width="1086" height="707" key="SettingsEditor" timestamp="1586015914347">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="213" y="86" width="1086" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586015914347" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586542801094">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586542801094" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585677710583">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585677710583" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Assignment$InteractivePercolationVisualizer.ic" NAME="InteractivePercolationVisualizer Coverage Results" MODIFIED="1586017196081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
